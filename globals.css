@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@media (min-width: 375px) {
+  body {
+    background: url("../app/public/image/banner-background.jpg");
+    font-family: Syne;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+body {
+  color: white;
+  background: url("../app/public/image/banner-background.jpg");
+  font-family: Syne;
+}
+
+@media (min-width: 768px) {
+  footer {
+    background: url("./public/image/service-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+}
+
+@media (min-width: 375px) {
+  footer {
+    background: url("./public/image/service-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (min-width: 375px) {
+  .overlayImage {
+    background-image: url("./public/image/journey-backgroundimage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 375px) {
+  .journey-section {
+    background-image: url("./public/image/service-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 0;
+  }
+}
+
+.service-section {
+  background: url("../app/public/image/service-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-section {
+  background: url("../app/public/image/banner-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.process-section {
+  background: url("../app/public/image/service-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.recentwork-section {
+  background: url("../app/public/image/service-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 1024px) {
+  .journey-section {
+    background-image: url("./public/image/service-background.jpg");
+    /* Ảnh chính */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .overlayImage {
+    background-image: url("./public/image/journey-backgroundimage.jpg");
+    /* Ảnh phụ */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    /* Điều chỉnh độ trong suốt của lớp ảnh phụ */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e1b261;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.swiper-pagination-bullet:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.border-top-50::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 40%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.border-top-50:hover::before {
+  background-color: #e1b261;
+}
+
+/* CSS cho third-swiper-pagination */
+
+.third-swiper-pagination {
+  display: flex;
+  flex-direction: row;
+}
+
+.third-swiper-pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  background-color: #999999;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.third-swiper-pagination .swiper-pagination-bullet-active {
+  background: #e1b261;
+  transform: scale(1.3);
+  opacity: 1;
+}

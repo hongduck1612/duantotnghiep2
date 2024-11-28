@@ -1,0 +1,147 @@
+.register-container {
+    display: flex;
+    height: 100vh;
+}
+
+.register-left, .register-right {
+    flex: 1;
+}
+
+.register-left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+}
+
+.image-center {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.register-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.register-right h2 {
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.register-message {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 75%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-bottom: 2px solid #ffcc00;
+}
+
+.btn-register {
+    width: 75%;
+    padding: 12px;
+    background-color: #ffcc00;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-register:hover {
+    background-color: #e6b800;
+}
+
+.register-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+.register-links p {
+    color: #000;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.login-link {
+    color: #e6b800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .register-right {
+        width: 100%;
+        padding: 20px;
+    }
+    .form-group input,
+    .btn-register {
+        width: 100%;
+    }
+    .register-links {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .register-right h2 {
+        font-size: 1.8rem;
+    }
+    .form-group input,
+    .btn-register {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .register-container {
+        flex-direction: column;
+    }
+    .register-left {
+        display: flex; /* Hiá»ƒn thá»‹ láº¡i hĂ¬nh áº£nh */
+        justify-content: center; /* Canh giá»¯a hĂ¬nh áº£nh */
+        align-items: center;
+    }
+    .register-right {
+        width: 100%;
+        padding: 15px;
+    }
+    .form-group input,
+    .btn-register {
+        width: 100%;
+    }
+}
